@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from 'react-bootstrap/Nav';
 import DnDLogo from './assets/DnD-Logo.png'
+import { Link } from "react-router-dom";
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 
@@ -23,6 +25,17 @@ function Navigation({ loggedIn, setLoggedIn }) {
                     <Col className="">
                         <Nav.Item >
                             <h3 className="pt-5 mr-5">Dungeons & Dragons Character Creator</h3>
+                            <Button className="m-3" variant="danger">
+                                <Link to="/home">Home</Link>
+                            </Button>
+                            
+                            <Button className="m-3" variant="danger">
+                                <Link to="/spells">Spells</Link>
+                            </Button>
+                            
+                            <Button className="m-3" variant="danger">
+                                <Link to="/feats">Feats</Link>
+                            </Button>
                         </Nav.Item>
                     </Col>
 
