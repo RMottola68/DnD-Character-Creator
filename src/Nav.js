@@ -34,7 +34,7 @@ function Navigation({ loggedIn, setLoggedIn }) {
                             </Button>
                             
                             <Button className="m-3" variant="danger">
-                                <Link to="/feats">Feats</Link>
+                                <Link to="/equipment">Equipment</Link>
                             </Button>
                         </Nav.Item>
                     </Col>

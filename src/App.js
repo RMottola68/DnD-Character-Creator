@@ -10,7 +10,7 @@ import './App.css';
 
 import Navigation from "./Nav";
 import SpellSearch from './SpellSearch';
-import FeatSearch from './FeatSearch';
+import EquipmentSearch from './EquipmentSearch';
 import Bookmarks from './Bookmarks';
 import { Nav } from 'react-bootstrap';
 
@@ -25,7 +25,7 @@ function App() {
       <Routes>
         <Route path="/home" element={<Bookmarks />} />
         <Route path="spells" element={<SpellSearch />} />
-        <Route path="feats" element={<FeatSearch />} />
+        <Route path="equipment" element={<EquipmentSearch />} />
       </Routes>
     </ div>
 
