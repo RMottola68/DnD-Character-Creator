@@ -1,6 +1,7 @@
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import {useState, useEffect} from "react";
 import Spell from "./Spell";
+import TavernImage from './assets/Tavern.jpg'
 function SpellSearch(){
     const [spells, setSpells] = useState([]);
     const [spellSearch, setSpellSearch] = useState('');
@@ -27,8 +28,8 @@ function SpellSearch(){
         )
     })
     return(
-        <div>
-            <div className="search">
+        <div style={{background:{TavernImage}}}>
+            <div className="search" >
                 <input 
                 onChange={(event) => setSpellSearch(prevState => prevState = event.target.value)}
                  
