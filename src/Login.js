@@ -9,25 +9,25 @@ function LogIn({ loggedIn, setLoggedIn }) {
     const[password, setPassword] = useState('');
     return(
         
-            <Row>
+            <Row className="p-0 m-0">
                 <Nav 
                 activeKey="/home"
                 onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
                 >
                     <Col>
-                        <Nav.Item className="justify-content-left p-3">
+                        <Nav.Item className="justify-content-left p-5">
                             <img src={DnDLogo} style={{width: 280, height: 'auto'}} />
                         </Nav.Item>
                     </Col>
 
-                    <Col>
-                        <Nav.Item className="justify-content-center">
-                            <h3>Dungeons & Dragons Character Creator</h3>
+                    <Col className="">
+                        <Nav.Item >
+                            <h3 className="pt-5 mr-5">Dungeons & Dragons Character Creator</h3>
                         </Nav.Item>
                     </Col>
 
                     <Col>
-                        <Nav.Item>
+                        <Nav.Item >
                             <Row>
                                 <Form onSubmit={(event) => {
                                     event.preventDefault()
@@ -35,10 +35,10 @@ function LogIn({ loggedIn, setLoggedIn }) {
                                     console.log(password)
                                 }}>
                                 
-                                    <Form.Group className="mb-3" controlId="formUsername">
+                                    <Form.Group className="mb-3 px-5 mx-5" controlId="formUsername">
                                         <Col>
                                             <Form.Label>Username</Form.Label>
-                                            <Form.Control onChange={(event) => {
+                                            <Form.Control className='w-50' onChange={(event) => {
                                                 setUsername(prevState => prevState = event.target.value)
                                                 console.log(username)}}
                                                 value={username}
@@ -49,7 +49,7 @@ function LogIn({ loggedIn, setLoggedIn }) {
                                     
                                         <Col>
                                             <Form.Label>Password</Form.Label>
-                                            <Form.Control onChange={(event) => {
+                                            <Form.Control className='w-50' onChange={(event) => {
                                                 setPassword(prevState => prevState = event.target.value)
                                                 console.log(password)
                                                 }} 
@@ -57,7 +57,7 @@ function LogIn({ loggedIn, setLoggedIn }) {
                                                 placeholder="Password" 
                                             />
                                         </Col>
-                                        <Button variant="primary" type="submit">Submit</Button>
+                                        <Button variant="danger" type="submit" className='mt-3'>Submit</Button>
                                         
                                     </Form.Group>
                                 
