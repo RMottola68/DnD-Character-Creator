@@ -1,6 +1,6 @@
 function Bookmarks(){
     return(
-        <div>penis</div>
+        <div>Home</div>
     )
 }
 

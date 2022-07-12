@@ -1,6 +1,6 @@
 function FeatSearch(){
     return(
-        <div>PENIS</div>
+        <div>Feats</div>
     )
 }
 
