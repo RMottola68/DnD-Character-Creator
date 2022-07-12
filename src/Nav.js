@@ -4,7 +4,7 @@ import DnDLogo from './assets/DnD-Logo.png'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 
-function LogIn({ loggedIn, setLoggedIn }) {
+function Navigation({ loggedIn, setLoggedIn }) {
     const[username, setUsername] = useState('');
     const[password, setPassword] = useState('');
     return(
@@ -76,4 +76,4 @@ function LogIn({ loggedIn, setLoggedIn }) {
 
 
 
-export default LogIn;
+export default Navigation;

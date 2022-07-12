@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import LoggedIn from './LoggedIn'
-import Login from "./Login"
+import Navigation from "./Nav"
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -10,7 +9,7 @@ function App() {
 
   return (
     <>
-      {loggedIn ? <LoggedIn /> : <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn}/> }
+      <Navigation loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
     </>
   );
 }
