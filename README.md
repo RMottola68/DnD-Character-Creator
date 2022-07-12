@@ -1,3 +1,13 @@
+# M.inimum V.iable P.roduct
+ - 5 components:"nav","spell search"," feat search","home","spell container", "feat container"
+ - 3 client-side routes: "home","spells","feats"
+ - Need a GET and POST: "GET bookmarks", "POST spells and feats to bookmarks"
+    -Fetch from DnD API
+ - Make sure it's straight stylin'
+
+# Advanced stuff
+ - Login system
+ 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

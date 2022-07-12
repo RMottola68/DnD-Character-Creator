@@ -1,1 +1,29 @@
-{"users": []}
+{
+    "users":[
+       {"name":"Braylan",
+        "id":"0",
+        "username":"BraisinBran",
+        "password":"test1",
+       "bookmarks":[
+        {
+            "spells":[],
+            "feats":[]
+        }
+     ] 
+    },
+    {"name":"Ryan",
+        "id":"1",
+        "username":"idk",
+        "password":"test2",
+       "bookmarks":[
+        {
+            "spells":[],
+            "feats":[]
+        }
+     ] 
+    }
+
+]
+    
+
+}
