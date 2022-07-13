@@ -22,7 +22,7 @@ function App() {
   function fetchMySpells() {
     fetch('http://localhost:8000/users/0')
     .then(res => res.json())
-    .then(spellData =>{ console.log(spellData); setMySpells(prevState => prevState = spellData.spells)})
+    .then(spellData =>{setMySpells(prevState => prevState = spellData.spells)})
     
   }
   
@@ -34,7 +34,6 @@ function App() {
 
   useEffect(fetchMySpells, []);
   useEffect(fetchMyEquipment, []);
-
 
   return (
     <div>

@@ -2,17 +2,27 @@ import {Button } from 'react-bootstrap';
 function Spell({ spell, mySpells, setMySpells }) {
 
     function addSpell() {
-        
-        fetch('http://localhost:8000/users/0/?key=spells', {
-            method: 'POST',
-            header: {
+        const spellObj = {
+            name: spell.name,
+            dnd_class: spell.dnd_class,
+            school: spell.school,
+            desc: spell.desc,
+            level: spell.level
+
+        }    
+        fetch('http://localhost:8000/users/0', {
+            method: 'PATCH',
+            headers: {
                 "Content-Type": "application/json",
-                accept: "application/json"
+                // accept: "application/json"
             },
-            body: JSON.stringify({spell})
+            body: JSON.stringify({spells: [...mySpells, spellObj]})
         })
         .then(res => res.json())
-        .then(spellData => setMySpells(prevState => prevState = [...mySpells, spellData]))
+        .then(spellData => {
+            console.log(spellData)
+            setMySpells(prevState => prevState = [...mySpells, spellData.spells[spellData.spells.length-1]])
+        })
         .then(console.log('clicked'))
       
 

@@ -2,7 +2,7 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import {useState, useEffect} from "react";
 import Item from "./Item";
 import TavernImage from './assets/Tavern.jpg'
-function EquipmentSearch(){
+function EquipmentSearch({ myEquipment, setMyEquipment }){
     const [equipment, setEquipment] = useState([]);
     const [equipmentSearch, setEquipmentSearch] = useState('');
 
@@ -37,10 +37,9 @@ function EquipmentSearch(){
 
                 />
             </div>
-            <Button className="m-3" variant="danger" onClick={console.log(equipment)}>Get spells</Button>
             <div>{equipmentToDisplay.map((item) =>{
                 return(
-                <Item item={item} />
+                <Item item={item} myEquipment={myEquipment} setMyEquipment={setMyEquipment} />
                 )
             })}</div>
         </div>
