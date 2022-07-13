@@ -25,16 +25,16 @@ function Navigation({ loggedIn, setLoggedIn }) {
                     <Col className="">
                         <Nav.Item >
                             <h3 className="pt-5 mr-5">Dungeons & Dragons Character Creator</h3>
-                            <Button className="m-3" variant="danger">
-                                <Link to="/home">Home</Link>
+                            <Button className="m-3" variant="danger" type="button">
+                                <Link className="text-decoration-none  text-white" to="/home">Home</Link>
                             </Button>
                             
                             <Button className="m-3" variant="danger">
-                                <Link to="/spells">Spells</Link>
+                                <Link  className="text-decoration-none  text-white" to="/spells">Spells</Link>
                             </Button>
                             
                             <Button className="m-3" variant="danger">
-                                <Link to="/equipment">Equipment</Link>
+                                <Link  className="text-decoration-none  text-white" to="/equipment">Equipment</Link>
                             </Button>
                         </Nav.Item>
                     </Col>

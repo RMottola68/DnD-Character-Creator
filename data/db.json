@@ -1,29 +1,20 @@
 {
-    "users":[
-       {"name":"Braylan",
-        "id":"0",
-        "username":"BraisinBran",
-        "password":"test1",
-       "bookmarks":[
-        {
-            "spells":[],
-            "feats":[]
-        }
-     ] 
+  "users": [
+    {
+      "name": "Braylan",
+      "id": "0",
+      "username": "BraisinBran",
+      "password": "test1",
+      "spells": [],
+      "equipment": []
     },
-    {"name":"Ryan",
-        "id":"1",
-        "username":"idk",
-        "password":"test2",
-       "bookmarks":[
-        {
-            "spells":[],
-            "feats":[]
-        }
-     ] 
+    {
+      "id": "1",
+      "name": "Ryan",
+      "username": "GarbageGuts",
+      "password": "test2",
+      "spells": [],
+      "equipment": []
     }
-
-]
-    
-
+  ]
 }

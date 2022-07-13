@@ -2,7 +2,7 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import {useState, useEffect} from "react";
 import Spell from "./Spell";
 import TavernImage from './assets/Tavern.jpg'
-function SpellSearch(){
+function SpellSearch({ mySpells, setMySpells }){
     const [spells, setSpells] = useState([]);
     const [spellSearch, setSpellSearch] = useState('');
 
@@ -13,13 +13,7 @@ function SpellSearch(){
     }
     
     useEffect(getSpells,[])
-    console.log(spells)
 
-    // const spellList = spells.map((spell)=>{
-    //     return(
-    //         <Spell spell={spell} />
-    //     )
-    // })
 
     const spellsToDisplay = spells.filter((spell) => {
         let spellSearchCase = spellSearch.toLowerCase();
@@ -38,10 +32,10 @@ function SpellSearch(){
 
                 />
             </div>
-            <Button className="m-3" variant="danger" onClick={console.log(spells)}>Get spells</Button>
-            <div>{spellsToDisplay.map((spell) =>{
+            <Button className="m-3" variant="danger">Get spells</Button>
+            <div>{spellsToDisplay.map((spell, index) =>{
                 return(
-                <Spell spell={spell} />
+                <Spell key={index} spell={spell} mySpells={mySpells} setMySpells={setMySpells} />
                 )
             })}</div>
         </div>
