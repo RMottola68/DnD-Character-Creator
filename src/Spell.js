@@ -1,4 +1,5 @@
 import {Button } from 'react-bootstrap';
+
 function Spell({ spell, mySpells, setMySpells }) {
 
     function addSpell() {
@@ -36,12 +37,13 @@ function Spell({ spell, mySpells, setMySpells }) {
 
     return(
         
-        <div className="spell-name"  style={{ color: 'blue',marginBottom:20, padding: 20,borderBottomColor: "black",borderBottomWidth:2,borderBottomStyle:"solid",borderLeft: "black" ,borderLeftStyle:"solid", marginLeft:2,textAlign:"center",background:"rgb(200,200,200)"}}>
-            <h1 style={{padding:0,margin:0}}>Spell Name: {spell.name} <Button style={{}} onClick={addSpell}>Bookmark Spell</Button></h1>
-            <h2 style={{padding:0,margin:0}}>Spell School: {spell.school}</h2>
+        <div className="spell-name"  style={{ color: 'red',marginBottom:20, padding: 20,borderBottomColor: "red",borderBottomWidth:2,borderBottomStyle:"solid",borderLeft: "red" ,borderLeftStyle:"solid", marginLeft:2,textAlign:"center",background:"rgb(0,0,0)"}}>
+            <Button className="Ruslan-Display" style={{float:"right"}} onClick={addSpell}><span class="material-symbols-outlined">bookmark_add</span></Button>
+            <h1 className="Cinzel-Decorative" style={{padding:0,margin:0}}>Spell Name: <span className='' style={{color:"white"}}>{spell.name}</span> </h1>
+            <h2 className="Cinzel-Decorative" style={{padding:0,margin:0}}>Spell School: <span className='Shojumaru' style={{color:"white"}}>{spell.school}</span></h2>
             
-            <h4 style={{padding:0,borderBottom:"blue solid 2px",fontSize:"14px",marginLeft:"35%",marginRight:"35%"}}><strong>Classes:</strong> <em>{spell.dnd_class} </em>| <strong>Spell Level:</strong> <em>{spell.level}</em></h4>
-            <p style={{padding:0,margin:0,paddingTop:"10px"}}>Description: {spell.desc}</p>
+            <h4 style={{padding:0,borderBottom:"white solid 2px",fontSize:"14px",marginLeft:"35%",marginRight:"35%"}}><strong>Classes:</strong> <em style={{color:"white"}}>{spell.dnd_class} </em>| <strong>Spell Level:</strong> <em style={{color:"white"}}>{spell.level}</em></h4>
+            <p className="" style={{padding:0,margin:0,paddingTop:"10px",color:"white"}}>Description: {spell.desc}</p>
            
         </div>
     )

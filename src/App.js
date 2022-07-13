@@ -14,6 +14,7 @@ import EquipmentSearch from './EquipmentSearch';
 import Bookmarks from './Bookmarks';
 
 
+
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [mySpells, setMySpells] = useState([]);
@@ -36,7 +37,7 @@ function App() {
   useEffect(fetchMyEquipment, []);
 
   return (
-    <div>
+    <div style={{background:"black",overflow:"hidden"}}>
       <Navigation loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Routes>
         <Route path="/home" element={<Bookmarks mySpells={mySpells} myEquipment={myEquipment}/>} />
