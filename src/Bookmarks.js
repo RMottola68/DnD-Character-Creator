@@ -1,4 +1,5 @@
 import Spell from "./Spell";
+import Item from "./Item"
 function Bookmarks({ mySpells, myEquipment }){
     
     const renderMySpells = mySpells.map((spell) => {
@@ -8,10 +9,17 @@ function Bookmarks({ mySpells, myEquipment }){
     })
     
     
-    //   function RenderMyEquipment
+    const renderMyEquipment = myEquipment.map((item) => {
+        return(
+            <Item item={item} />
+        )
+    })
     
     return(
-        <div>{renderMySpells}</div>
+        <>
+            <div>{renderMySpells}</div>
+            <div>{renderMyEquipment}</div>
+        </>
     )
 }
 
