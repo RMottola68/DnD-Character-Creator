@@ -30,11 +30,11 @@ function Item({ item, myEquipment, setMyEquipment }) {
     }
 
     return(
-        <div className="item-name"  style={{ color: 'blue',marginBottom:20, padding: 20,borderBottomColor: "black",borderBottomWidth:2,borderBottomStyle:"solid",borderLeft: "black" ,borderLeftStyle:"solid", marginLeft:2,textAlign:"center"}}>
+        <div className="item-name"  style={{ color: 'blue',marginBottom:20, padding: 20,borderBottomColor: "black",borderBottomWidth:2,borderBottomStyle:"solid",borderLeft: "black" ,borderLeftStyle:"solid", marginLeft:2,textAlign:"center",background:"rgb(200,200,200)"}}>
         <h1 style={{padding:0,margin:0}}>Item Name: {item.name} <Button style={{}} onClick={addItem} >Bookmark Item</Button></h1>
         <h2 style={{padding:0,margin:0}}>Weapon Category: {item.category}</h2>
         
-        <h4 style={{padding:0,borderBottom:"blue solid 2px",fontSize:"14px"}}><strong>Damage Dice:</strong> <em>{item.damage_dice} </em>| <strong>Weight:</strong> <em>{item.weight}</em></h4>
+        <h4 style={{padding:0,borderBottom:"blue solid 2px",fontSize:"14px",marginLeft:"35%",marginRight:"35%"}}><strong>Damage Dice:</strong> <em>{item.damage_dice} </em>| <strong>Weight:</strong> <em>{item.weight}</em></h4>
         <p style={{padding:0,margin:0,paddingTop:"10px"}}>Cost: {item.cost}</p>
        
     </div>

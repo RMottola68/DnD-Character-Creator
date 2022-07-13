@@ -36,7 +36,7 @@ function Spell({ spell, mySpells, setMySpells }) {
 
     return(
         
-        <div className="spell-name"  style={{ color: 'blue',marginBottom:20, padding: 20,borderBottomColor: "black",borderBottomWidth:2,borderBottomStyle:"solid",borderLeft: "black" ,borderLeftStyle:"solid", marginLeft:2,textAlign:"center"}}>
+        <div className="spell-name"  style={{ color: 'blue',marginBottom:20, padding: 20,borderBottomColor: "black",borderBottomWidth:2,borderBottomStyle:"solid",borderLeft: "black" ,borderLeftStyle:"solid", marginLeft:2,textAlign:"center",background:"rgb(200,200,200)"}}>
             <h1 style={{padding:0,margin:0}}>Spell Name: {spell.name} <Button style={{}} onClick={addSpell}>Bookmark Spell</Button></h1>
             <h2 style={{padding:0,margin:0}}>Spell School: {spell.school}</h2>
             

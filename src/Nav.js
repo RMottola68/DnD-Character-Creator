@@ -11,7 +11,7 @@ function Navigation({ loggedIn, setLoggedIn }) {
     const[password, setPassword] = useState('');
     return(
         
-            <Row className="p-0 m-0">
+            <Row className="p-0 " style={{borderBottom:"solid black 2px",marginBottom:"10px",background:"rgb(0,0,0)"}}>
                 <Nav 
                 activeKey="/home"
                 onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
@@ -22,7 +22,7 @@ function Navigation({ loggedIn, setLoggedIn }) {
                         </Nav.Item>
                     </Col>
 
-                    <Col className="">
+                    <Col className="" style={{color:"white"}}>
                         <Nav.Item >
                             <h3 className="pt-5 mr-5">Dungeons & Dragons Character Creator</h3>
                             <Button className="m-3" variant="danger" type="button">
@@ -39,7 +39,7 @@ function Navigation({ loggedIn, setLoggedIn }) {
                         </Nav.Item>
                     </Col>
 
-                    <Col>
+                    <Col style={{color:"white"}}>
                         <Nav.Item >
                             <Row>
                                 <Form onSubmit={(event) => {
