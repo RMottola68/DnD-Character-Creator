@@ -43,7 +43,7 @@ function Spell({ spell, mySpells, setMySpells }) {
             <h2 className="Cinzel-Decorative" style={{padding:0,margin:0}}>Spell School: <span className='Shojumaru' style={{color:"white"}}>{spell.school}</span></h2>
             
             <h4 style={{padding:0,borderBottom:"white solid 2px",fontSize:"14px",marginLeft:"35%",marginRight:"35%"}}><strong>Classes:</strong> <em style={{color:"white"}}>{spell.dnd_class} </em>| <strong>Spell Level:</strong> <em style={{color:"white"}}>{spell.level}</em></h4>
-            <p className="" style={{padding:0,margin:0,paddingTop:"10px",color:"white"}}>Description: {spell.desc}</p>
+            <p className="" style={{padding:0,margin:0,paddingTop:"10px",color:"white"}}><span className='Ruslan-Display'>Description:</span> {spell.desc}</p>
            
         </div>
     )
