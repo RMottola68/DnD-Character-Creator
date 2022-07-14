@@ -9,7 +9,7 @@ function Spell({ spell, mySpells, setMySpells, key }) {
             school: spell.school,
             desc: spell.desc,
             level: spell.level,
-            id: key
+            id: spell.name
 
         }    
         fetch('http://localhost:8000/users/0', {

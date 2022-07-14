@@ -3,13 +3,12 @@ import Item from "./Item"
 import Carter_One from "./assets/fonts/Carter_One/CarterOne-Regular.ttf"
 import { Button } from 'react-bootstrap';
 
-function Bookmarks({ mySpells, myEquipment }){
+function Bookmarks({ mySpells, setMySpells, myEquipment, setMyEquipment }){
     
     const renderMySpells = mySpells.map((spell, index) => {
-        console.log(spell)
         return(
             <div key={index} >
-                <Button className="m-3 Ruslan-Display" variant="danger" onClick={() => console.log(spell)}>Delete</Button>
+                <Button className="m-3 Ruslan-Display" variant="danger" onClick={() => deleteSpell(spell)} >Delete</Button>
                 <Spell key={index} spell={spell} />
             </div>
         )
@@ -20,23 +19,56 @@ function Bookmarks({ mySpells, myEquipment }){
         
         return(
             <>
-                <Button className="m-3 Ruslan-Display" variant="danger">Delete</Button>
+                <Button className="m-3 Ruslan-Display" variant="danger" onClick={() => deleteItem(item)} >Delete</Button>
                 <Item key={index} item={item} />
             </>
         )
     })
 
-    function handleDelete(spell){
+    function deleteSpell(spell){
+        const newSpells = [...mySpells]
+        
+        const filteredSpells = newSpells.filter((magic) => {
+            
+            return magic !== spell
+        })
+        console.log(filteredSpells);
         fetch('http://localhost:8000/users/0', {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json",
                 // accept: "application/json"
             },
-            body: JSON.stringify({spells: [...mySpells]})
+            body: JSON.stringify({spells: [...filteredSpells]})
         })
         .then(res => res.json())
-        .then(console.log(spell))
+        .then(spellData => {
+            
+            setMySpells(prevState => prevState = [...filteredSpells])
+        })
+    }
+
+    function deleteItem(item){
+        const newItems = [...myEquipment]
+        
+        const filteredItems = newItems.filter((weapon) => {
+            
+            return weapon !== item
+        })
+        
+        fetch('http://localhost:8000/users/0', {
+            method: 'PATCH',
+            headers: {
+                "Content-Type": "application/json",
+                // accept: "application/json"
+            },
+            body: JSON.stringify({equipment: [...filteredItems]})
+        })
+        .then(res => res.json())
+        .then(itemData => {
+            
+            setMyEquipment(prevState => prevState = [...filteredItems])
+        })
     }
     
     return(
