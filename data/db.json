@@ -46,6 +46,27 @@
           "category": "Simple Melee Weapons",
           "cost": "1 sp",
           "weight": "2 lb."
+        },
+        {
+          "name": "Shortbow",
+          "damage_dice": "1d6",
+          "category": "Simple Ranged Weapons",
+          "cost": "25 gp",
+          "weight": "2 lb."
+        },
+        {
+          "name": "Glaive",
+          "damage_dice": "1d10",
+          "category": "Martial Melee Weapons",
+          "cost": "20 gp",
+          "weight": "6 lb."
+        },
+        {
+          "name": "Greatsword",
+          "damage_dice": "2d6",
+          "category": "Martial Melee Weapons",
+          "cost": "50 gp",
+          "weight": "6 lb."
         }
       ]
     },
