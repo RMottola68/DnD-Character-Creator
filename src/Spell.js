@@ -1,6 +1,6 @@
 import {Button } from 'react-bootstrap';
 
-function Spell({ spell, mySpells, setMySpells }) {
+function Spell({ spell, mySpells, setMySpells, key }) {
 
     function addSpell() {
         const spellObj = {
@@ -8,7 +8,8 @@ function Spell({ spell, mySpells, setMySpells }) {
             dnd_class: spell.dnd_class,
             school: spell.school,
             desc: spell.desc,
-            level: spell.level
+            level: spell.level,
+            id: key
 
         }    
         fetch('http://localhost:8000/users/0', {
@@ -38,7 +39,7 @@ function Spell({ spell, mySpells, setMySpells }) {
     return(
         
         <div className="spell-name"  style={{ color: 'red',marginBottom:20, padding: 20,borderBottomColor: "red",borderBottomWidth:2,borderBottomStyle:"solid",borderLeft: "red" ,borderLeftStyle:"solid", marginLeft:2,textAlign:"center",background:"rgb(0,0,0)"}}>
-            <Button className="Ruslan-Display" style={{float:"right"}} onClick={addSpell}><span class="material-symbols-outlined">bookmark_add</span></Button>
+            <Button className="Ruslan-Display" style={{float:"right"}} onClick={addSpell}><span className="material-symbols-outlined">bookmark_add</span></Button>
             <h1 className="Cinzel-Decorative" style={{padding:0,margin:0}}>Spell Name: <span className='' style={{color:"white"}}>{spell.name}</span> </h1>
             <h2 className="Cinzel-Decorative" style={{padding:0,margin:0}}>Spell School: <span className='Shojumaru' style={{color:"white"}}>{spell.school}</span></h2>
             

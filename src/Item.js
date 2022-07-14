@@ -31,7 +31,7 @@ function Item({ item, myEquipment, setMyEquipment }) {
 
     return(
         <div className="item-name"  style={{ color: 'red',marginBottom:20, padding: 20,borderBottomColor: "red",borderBottomWidth:2,borderBottomStyle:"solid",borderLeft: "black" ,borderLeftStyle:"solid", marginLeft:2,textAlign:"center",background:"rgb(0,0,0)"}}>
-        <Button className="Ruslan-Display" style={{float:"right"}} onClick={addItem} ><span class="material-symbols-outlined">
+        <Button className="Ruslan-Display" style={{float:"right"}} onClick={addItem} ><span className="material-symbols-outlined">
 bookmark_add
 </span></Button>
         <h1 className="Cinzel-Decorative" style={{padding:0,margin:0}}>Item Name: <span className='' style={{color:"white"}}>{item.name} </span></h1>

@@ -32,12 +32,13 @@ function SpellSearch({ mySpells, setMySpells }){
 
                 />
             </div>
-            <Button className="m-3" variant="danger">Get spells</Button>
+            
             <div>{spellsToDisplay.map((spell, index) =>{
                 return(
                 <Spell key={index} spell={spell} mySpells={mySpells} setMySpells={setMySpells} />
                 )
-            })}</div>
+            })}
+            </div>
         </div>
         
     )
