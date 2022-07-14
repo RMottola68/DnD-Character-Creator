@@ -24,7 +24,7 @@ function Item({ item, myEquipment, setMyEquipment }) {
             console.log(equipmentData)
             setMyEquipment(prevState => prevState = [...myEquipment, equipmentData.equipment[equipmentData.equipment.length-1]])
         })
-        .then(console.log('clicked'))
+        .then(alert('Item added to bookmarks!'))
       
 
     }

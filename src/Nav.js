@@ -48,7 +48,7 @@ function Navigation({ loggedIn, setLoggedIn }) {
                         <Nav.Item >
                             <h3 className="pt-5 mr-5 Cinzel-Decorative">The Spells and Equipment Index</h3>
                             <Button className="m-3 Ruslan-Display" variant="danger" type="button">
-                                <Link className="text-decoration-none  text-white" to="/home">Home</Link>
+                                <Link className="text-decoration-none  text-white" to="">Home</Link>
                             </Button>
                             
                             <Button className="m-3 Ruslan-Display" variant="danger">

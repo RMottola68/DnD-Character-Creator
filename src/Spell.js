@@ -25,7 +25,7 @@ function Spell({ spell, mySpells, setMySpells, key }) {
             console.log(spellData)
             setMySpells(prevState => prevState = [...mySpells, spellData.spells[spellData.spells.length-1]])
         })
-        .then(console.log('clicked'))
+        .then(alert("Spell added to bookmarks!"))
       
 
     }

@@ -40,7 +40,7 @@ function App() {
     <div style={{background:"black",overflow:"hidden"}}>
       <Navigation loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Routes>
-        <Route path="/home" element={<Bookmarks mySpells={mySpells} setMySpells={setMySpells} myEquipment={myEquipment} setMyEquipment={setMyEquipment} />} />
+        <Route path="" className="isActive"element={<Bookmarks mySpells={mySpells} setMySpells={setMySpells} myEquipment={myEquipment} setMyEquipment={setMyEquipment} />} />
         <Route path="spells" element={<SpellSearch mySpells={mySpells} setMySpells={setMySpells} />} />
         <Route path="equipment" element={<EquipmentSearch myEquipment={myEquipment} setMyEquipment={setMyEquipment} />} />
       </Routes>
