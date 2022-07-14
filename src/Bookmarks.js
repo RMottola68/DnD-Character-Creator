@@ -1,5 +1,5 @@
-import Spell from "./Spell";
-import Item from "./Item"
+import Spell2 from "./Spell2";
+import BookmarkItem from "./BookmarkItem"
 import Carter_One from "./assets/fonts/Carter_One/CarterOne-Regular.ttf"
 import { Button } from 'react-bootstrap';
 
@@ -9,7 +9,7 @@ function Bookmarks({ mySpells, setMySpells, myEquipment, setMyEquipment }){
         return(
             <div key={index} >
                 <Button className="m-3 Ruslan-Display" variant="danger" onClick={() => deleteSpell(spell)} >Delete</Button>
-                <Spell key={index} spell={spell} />
+                <Spell2 key={index} spell={spell} />
             </div>
         )
     })
@@ -20,7 +20,7 @@ function Bookmarks({ mySpells, setMySpells, myEquipment, setMyEquipment }){
         return(
             <>
                 <Button className="m-3 Ruslan-Display" variant="danger" onClick={() => deleteItem(item)} >Delete</Button>
-                <Item key={index} item={item} />
+                <BookmarkItem key={index} item={item} />
             </>
         )
     })
