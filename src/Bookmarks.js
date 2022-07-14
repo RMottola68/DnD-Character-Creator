@@ -8,7 +8,9 @@ function Bookmarks({ mySpells, setMySpells, myEquipment, setMyEquipment }){
     const renderMySpells = mySpells.map((spell, index) => {
         return(
             <div key={index} >
-                <Button className="m-3 Ruslan-Display" variant="danger" onClick={() => deleteSpell(spell)} >Delete</Button>
+                <Button className="m-3 Ruslan-Display" variant="danger" onClick={() => deleteSpell(spell)} ><span class="material-symbols-outlined">
+                bookmark_remove
+</span></Button>
                 <Spell2 key={index} spell={spell} />
             </div>
         )
@@ -19,7 +21,9 @@ function Bookmarks({ mySpells, setMySpells, myEquipment, setMyEquipment }){
         
         return(
             <>
-                <Button className="m-3 Ruslan-Display" variant="danger" onClick={() => deleteItem(item)} >Delete</Button>
+                <Button className="m-3 Ruslan-Display" variant="danger" onClick={() => deleteItem(item)} ><span class="material-symbols-outlined">
+bookmark_remove
+</span></Button>
                 <BookmarkItem key={index} item={item} />
             </>
         )

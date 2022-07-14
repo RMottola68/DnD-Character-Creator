@@ -3,12 +3,34 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from 'react-bootstrap/Nav';
 import DnDLogo from './assets/DnD-Logo.png'
 import { Link } from "react-router-dom";
+
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 
 function Navigation({ loggedIn, setLoggedIn }) {
     const[username, setUsername] = useState('');
     const[password, setPassword] = useState('');
+
+    const [visible, setVisible] = useState(false)
+  
+    const toggleVisible = () => {
+      const scrolled = document.documentElement.scrollTop;
+      if (scrolled > 300){
+        setVisible(true)
+      } 
+      else if (scrolled <= 300){
+        setVisible(false)
+      }
+    };
+    
+    const scrollToTop = () =>{
+      window.scrollTo({
+        top: 0, 
+        behavior: 'smooth'
+      });
+    };
+    
+    window.addEventListener('scroll', toggleVisible);
     return(
         
             <Row className="p-0 " style={{borderBottom:"solid black 2px",marginBottom:"10px",background:"rgb(0,0,0)"}}>
@@ -39,7 +61,7 @@ function Navigation({ loggedIn, setLoggedIn }) {
                         </Nav.Item>
                     </Col>
 
-                    <Col style={{color:"white"}} className="Ruslan-Display">
+                    {/* <Col style={{color:"white"}} className="Ruslan-Display">
                         <Nav.Item >
                             <Row>
                                 <Form onSubmit={(event) => {
@@ -78,9 +100,14 @@ function Navigation({ loggedIn, setLoggedIn }) {
                                 </Form>
                             </Row>
                         </Nav.Item>
-                    </Col>
+                    </Col> */}
                     
                 </Nav>
+                <Button style={{display: visible ? 'inline' : 'none', position:"fixed",background:"rgb(50,50,50)",width:"fit-content",height:"fit-content",left:"90%",bottom:"40px",fontSize:"10px",zIndex:"99",cursor:"pointer", color:"red",border:"red"}}>
+      <span class="material-symbols-outlined" onClick={scrollToTop} style={{height:"fit-content"}}>
+arrow_upward
+</span>
+    </Button>
             </Row>
         
   

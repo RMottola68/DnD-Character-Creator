@@ -26,7 +26,7 @@ function SpellSearch({ mySpells, setMySpells }){
             <div className="search" >
                 <input 
                 onChange={(event) => setSpellSearch(prevState => prevState = event.target.value)}
-                 
+                placeholder="search spells here"
                 value={spellSearch}
                 type="text"
 

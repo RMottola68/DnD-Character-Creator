@@ -27,14 +27,15 @@ function EquipmentSearch({ myEquipment, setMyEquipment }){
         )
     })
     return(
-        <div style={{background:{TavernImage}}}>
-            <div className="search " >
-                <input 
+        <section>
+            <div className="search" style={{}}>
+                <input className='' style={{}}
                 onChange={(event) => setEquipmentSearch(prevState => prevState = event.target.value)}
-                 
+                 placeholder="search equipment here"
                 value={equipmentSearch}
                 type="text"
-
+                
+               
                 />
             </div>
             <div>{equipmentToDisplay.map((item) =>{
@@ -42,7 +43,7 @@ function EquipmentSearch({ myEquipment, setMyEquipment }){
                 <Item item={item} myEquipment={myEquipment} setMyEquipment={setMyEquipment} />
                 )
             })}</div>
-        </div>
+        </section>
         
     )
     
